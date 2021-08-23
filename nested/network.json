@@ -338,28 +338,28 @@
                     }
                 ],
                 "inboundNatRules": [],
-                "outboundRules": [
-                    {
-                        "name": "Outboundrule001",
-                        "properties": {
-                            "allocatedOutboundPorts": 12800,
-                            "protocol": "Tcp",
-                            "enableTcpReset": false,
-                            "idleTimeoutInMinutes": 5,
-                            "backendAddressPool": {
-                                "id": "[variables('extBeID')]"
-                            },
-                            "frontendIPConfigurations": [
-                                {
-                                    "id": "[variables('extOutID001')]"
-                                },
-                                {
-                                    "id": "[variables('extOutID002')]"
-                                }
-                            ]
-                        }
-                    }
-                ],
+                // "outboundRules": [
+                //     {
+                //         "name": "Outboundrule001",
+                //         "properties": {
+                //             "allocatedOutboundPorts": 12800,
+                //             "protocol": "Tcp",
+                //             "enableTcpReset": false,
+                //             "idleTimeoutInMinutes": 5,
+                //             "backendAddressPool": {
+                //                 "id": "[variables('extBeID')]"
+                //             },
+                //             "frontendIPConfigurations": [
+                //                 {
+                //                     "id": "[variables('extOutID001')]"
+                //                 },
+                //                 {
+                //                     "id": "[variables('extOutID002')]"
+                //                 }
+                //             ]
+                //         }
+                //     }
+                // ],
                 "inboundNatPools": []
             }
         },
