@@ -33,7 +33,7 @@
         {
             "type": "Microsoft.Network/natGateways",
             "apiVersion": "2020-05-01",
-            "name": "[concat(parameters('vnetName'), '/', parameters('moodleCommon').subnetWeb, '-natgw')]",
+            "name": "[concat(parameters('vnetName'), '-', parameters('moodleCommon').subnetWeb, '-natgw')]",
             "location": "[parameters('moodleCommon').location]",
             "properties": {
                 "idleTimeoutInMinutes": 4,
