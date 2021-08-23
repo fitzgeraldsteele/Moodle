@@ -56,12 +56,12 @@
             "name": "[concat(parameters('vnetName'), '/', parameters('moodleCommon').subnetWeb)]",
             "location": "[parameters('moodleCommon').location]",
             "dependsOn" : [
-                "[resourceId('Microsoft.Network/natGateways',concat(parameters('vnetName'), '/', parameters('moodleCommon').subnetWeb, '-natgw'))]"
+                "[resourceId('Microsoft.Network/natGateways',concat(parameters('vnetName'), '-', parameters('moodleCommon').subnetWeb, '-natgw'))]"
             ],
             "properties": {
                 "addressPrefix": "[parameters('moodleCommon').subnetWebRange]",
                 "natGateway": {
-                    "id": "[resourceId('Microsoft.Network/natGateways',concat(parameters('vnetName'), '/', parameters('moodleCommon').subnetWeb, '-natgw'))]"
+                    "id": "[resourceId('Microsoft.Network/natGateways',concat(parameters('vnetName'), '-', parameters('moodleCommon').subnetWeb, '-natgw'))]"
                 }
             }
         },
