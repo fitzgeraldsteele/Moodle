@@ -35,15 +35,14 @@
             "apiVersion": "2020-05-01",
             "name": "[concat(parameters('vnetName'), '-', parameters('moodleCommon').subnetWeb, '-natgw')]",
             "location": "[parameters('moodleCommon').location]",
+            "dependsOn": [
+                    "[resourceId('Microsoft.Network/publicIPAddresses', 'natgatewaypip')]"
+            ],
             "sku": {
                 "name": "Standard"
             },
             "properties": {
                 "idleTimeoutInMinutes": 4,
-
-                "dependsOn": [
-                    "[resourceId('Microsoft.Network/publicIPAddresses', 'natgatewaypip')]"
-                ],
                 "publicIpAddresses": [
                     {
                         "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'natgatewaypip')]"
